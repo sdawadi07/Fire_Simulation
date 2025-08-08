@@ -22,8 +22,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Name:Priya Dahal and Swastika Dawadi
- * CS 351L
  * Displays the base station log and simulation statistics using JavaFX components.
  * Supports filtering log entries by agent ID.
  */
