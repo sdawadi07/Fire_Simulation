@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * Represents a mobile agent that traverses the sensor network to monitor fire spread.
  * Agents prioritize movement to yellow (NEAR_FIRE) nodes and clone themselves when on yellow nodes.
  */
+
 public class MobileAgent implements Runnable {
     private final int id;
     private SensorNode currentNode;
