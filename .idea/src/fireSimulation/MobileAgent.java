@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+
 /**
  * Represents a mobile agent that traverses the sensor network to monitor fire spread.
  * Agents prioritize movement to yellow (NEAR_FIRE) nodes and clone themselves when on yellow nodes.
