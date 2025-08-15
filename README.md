@@ -127,38 +127,47 @@ reasons, displayed in the GUI.
 Simulation Panel: Visualizes the network with edges, node states (blue, yellow, red), agents
 (white "A"), and base station (black "B").
 
-Log Panel: Shows real-time agent event logs with filtering by Agent ID, plus stats: Total Agents, Active Agents, Burned Sensors, and Active Areas.
+Log Panel: Shows real-time agent event logs with filtering by Agent ID, plus stats: Total Agents, Active Agents, Burned 
+Sensors, and Active Areas.
 Tooltips: Hover over nodes to see location, state, and agent ID (if present).
 Controls: Start, pause, reset, load config, and speed adjustment.
 Design Choices
 Concurrency:
 
 Used ExecutorService for managing sensor and agent threads, ensuring efficient resource use.
-Employed ReentrantLock for sensor state and agent movement, with ordered locking in MobileAgent.randomWalk() (based on object hash codes) to prevent deadlocks.
+Employed ReentrantLock for sensor state and agent movement, with ordered locking in MobileAgent.randomWalk() (based on 
+object hash codes) to prevent deadlocks.
 Avoided global resources; agent IDs are generated via a synchronized nextAgentId in SimulationModel.
 Single Fire Start:
 
-Adhered to the assignment baseline by supporting a single fire start, using the last fire line in the config file for simplicity and clarity.
+Adhered to the assignment baseline by supporting a single fire start, using the last fire line in the config file for 
+simplicity and clarity.
 Smarter Movement:
 
-Agents prioritize yellow (NEAR_FIRE) nodes over blue (NORMAL) ones in randomWalk(), enhancing fire monitoring efficiency beyond the basic random walk requirement.
+Agents prioritize yellow (NEAR_FIRE) nodes over blue (NORMAL) ones in randomWalk(), enhancing fire monitoring efficiency
+beyond the basic random walk requirement.
 GUI Enhancements:
 
 Implemented hover tooltips in SimulationPanel for node details, improving usability over click-based dialogs.
-Centralized stats (Active Agents, Burned Sensors) in LogPanel with Total Agents and Active Areas, updated every 1 second for clear monitoring.
+Centralized stats (Active Agents, Burned Sensors) in LogPanel with Total Agents and Active Areas, updated every 1 second
+for clear monitoring.
 Fire Spread Logic:
 
-Yellow nodes transition to red after 3 seconds near a burning neighbor with a 30% chance, reset each cycle if not ignited, balancing observability and realism.
+Yellow nodes transition to red after 3 seconds near a burning neighbor with a 30% chance, reset each cycle if not 
+ignited, balancing observability and realism.
 Known Limitations
-Single Fire Start: Only the last fire line is used; multiple fire starts are not supported, aligning with the assignment’s minimum requirement.
+Single Fire Start: Only the last fire line is used; multiple fire starts are not supported, aligning with the assignment’s
+minimum requirement.
 Single Base Station: Only the first station line is recognized; extras are ignored to simplify initialization.
-Stat Update Frequency: Stats in LogPanel update every 1 second, slower than the 50ms GUI refresh, which may lag slightly behind real-time events.
+Stat Update Frequency: Stats in LogPanel update every 1 second, slower than the 50ms GUI refresh, which may lag slightly
+behind real-time events.
 Agent Destruction: Logged accurately, but GUI updates may not reflect all destructions instantly due to timing differences.
 No Tests: Unit tests are not included in this submission.
 Output Description
 
 GUI Window:
 Left: Network graph with colored nodes (blue, yellow, red), edges, agents (white "A"), and base station (black "B").
-Right: Log panel with a table of events (Time, Agent ID, Location, Reason) and filter controls, plus a stats section (Total Agents, Active Agents, Burned Sensors, Active Areas).
+Right: Log panel with a table of events (Time, Agent ID, Location, Reason) and filter controls, plus a stats section 
+(Total Agents, Active Agents, Burned Sensors, Active Areas).
 Bottom: Control panel with buttons (Start, Pause, Reset, Load Config) and speed slider.
 Console: Debugging output for agent movements, fire spread, and simulation state changes
