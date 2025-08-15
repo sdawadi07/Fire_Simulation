@@ -156,6 +156,7 @@ Stat Update Frequency: Stats in LogPanel update every 1 second, slower than the 
 Agent Destruction: Logged accurately, but GUI updates may not reflect all destructions instantly due to timing differences.
 No Tests: Unit tests are not included in this submission.
 Output Description
+
 GUI Window:
 Left: Network graph with colored nodes (blue, yellow, red), edges, agents (white "A"), and base station (black "B").
 Right: Log panel with a table of events (Time, Agent ID, Location, Reason) and filter controls, plus a stats section (Total Agents, Active Agents, Burned Sensors, Active Areas).
