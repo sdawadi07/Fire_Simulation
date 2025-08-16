@@ -170,5 +170,7 @@ GUI Window:
 Left: Network graph with colored nodes (blue, yellow, red), edges, agents (white "A"), and base station (black "B").
 Right: Log panel with a table of events (Time, Agent ID, Location, Reason) and filter controls, plus a stats section 
 (Total Agents, Active Agents, Burned Sensors, Active Areas).
+
 Bottom: Control panel with buttons (Start, Pause, Reset, Load Config) and speed slider.
+
 Console: Debugging output for agent movements, fire spread, and simulation state changes
