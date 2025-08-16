@@ -154,12 +154,15 @@ Centralized stats (Active Agents, Burned Sensors) in LogPanel with Total Agents 
 for clear monitoring.
 Fire Spread Logic:
 
-Yellow nodes transition to red after 3 seconds near a burning neighbor with a 30% chance, reset each cycle if not 
+Yellow nodes transition to red after 3 seconds near a burning neighbor with a 30% chance, reset each 
+cycle if not 
 ignited, balancing observability and realism.
 Known Limitations
-Single Fire Start: Only the last fire line is used; multiple fire starts are not supported, aligning with the assignment’s
+Single Fire Start: Only the last fire line is used; multiple fire starts are not supported, aligning
+with the assignment’s
 minimum requirement.
-Single Base Station: Only the first station line is recognized; extras are ignored to simplify initialization.
+Single Base Station: Only the first station line is recognized; extras are ignored to simplify
+initialization.
 Stat Update Frequency: Stats in LogPanel update every 1 second, slower than the 50ms GUI refresh, which may lag slightly
 behind real-time events.
 Agent Destruction: Logged accurately, but GUI updates may not reflect all destructions instantly due to timing differences.
