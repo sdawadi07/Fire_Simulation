@@ -128,7 +128,8 @@ reasons, displayed in the GUI.
 Simulation Panel: Visualizes the network with edges, node states (blue, yellow, red), agents
 (white "A"), and base station (black "B").
 
-Log Panel: Shows real-time agent event logs with filtering by Agent ID, plus stats: Total Agents, Active Agents, Burned 
+Log Panel: Shows real-time agent event logs with filtering by Agent ID, plus stats: Total Agents,
+Active Agents, Burned 
 Sensors, and Active Areas.
 Tooltips: Hover over nodes to see location, state, and agent ID (if present).
 Controls: Start, pause, reset, load config, and speed adjustment.
