@@ -137,7 +137,8 @@ Design Choices
 Concurrency:
 
 Used ExecutorService for managing sensor and agent threads, ensuring efficient resource use.
-Employed ReentrantLock for sensor state and agent movement, with ordered locking in MobileAgent.randomWalk() (based on 
+Employed ReentrantLock for sensor state and agent movement, with ordered locking in MobileAgent.
+randomWalk() (based on 
 object hash codes) to prevent deadlocks.
 Avoided global resources; agent IDs are generated via a synchronized nextAgentId in SimulationModel.
 Single Fire Start:
