@@ -57,6 +57,7 @@ Log Filter: Enter an Agent ID in the log panel to filter events.
 Config File Format:
 The simulation reads a text file (e.g., sample.txt) to initialize the network. Lines can appear in any order:
 
+
 node x y: Creates a sensor at coordinates (x, y).
 edge x1 y1 x2 y2: Connects sensors at (x1, y1) and (x2, y2) for communication.
 station x y: Sets the base station at (x, y) where the initial agent starts. Only the first station line is used; additional ones are ignored.
