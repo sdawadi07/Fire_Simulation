@@ -12,6 +12,7 @@ learn more about how programs can cooperate over a network thanks to this effort
 demonstrates how to use concurrency to manage multiple concurrent tasks. The objective is 
 to gain a basic understanding of distributed systems.
 
+
 # Project Structure
 
 ForestFireSimulation/
