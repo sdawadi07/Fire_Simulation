@@ -14,6 +14,7 @@ to gain a basic understanding of distributed systems.
 
 
 
+
 # Project Structure
 
 ForestFireSimulation/
